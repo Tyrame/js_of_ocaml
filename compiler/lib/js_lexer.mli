@@ -1,7 +1,6 @@
 (* Js_of_ocaml compiler
  * Copyright (C) 2013 Hugo Heuzard
  *)
-
 (* Yoann Padioleau
  *
  * Copyright (C) 2010 Facebook
@@ -18,7 +17,9 @@
  *)
 
 val initial :
-  (Lexing.lexbuf -> Parse_info.t) ->
-  Js_token.token option -> Lexing.lexbuf -> Js_token.token
+     (Lexing.lexbuf -> Parse_info.t)
+  -> Js_token.token option
+  -> Lexing.lexbuf
+  -> Js_token.token
 
 val pos : Lexing.lexbuf -> string * int

@@ -16,18 +16,17 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  *)
-
 (* The type of tokens. *)
 
 type token =
   | TWeakdef
   | TVersion
-  | TVNum of (string)
+  | TVNum of string
   | TSemi
   | TRequires
   | TProvides
-  | TOTHER of (string)
-  | TIdent of (string)
+  | TOTHER of string
+  | TIdent of string
   | TComma
   | TA_Shallow
   | TA_Pure
@@ -51,4 +50,4 @@ exception Error
 
 (* The monolithic API. *)
 
-val annot: (Lexing.lexbuf -> token) -> Lexing.lexbuf -> (Jsoo_primitive.t)
+val annot : (Lexing.lexbuf -> token) -> Lexing.lexbuf -> Jsoo_primitive.t
